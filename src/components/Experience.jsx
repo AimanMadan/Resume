@@ -22,10 +22,14 @@ August 2019 - January 2023, San Diego, CA
 - Designed engaging computer science and robotics curricula incorporating Python, Scratch, CodeCombat, and Arduino programming.
 - Provided guidance in debugging code, troubleshooting circuits, and optimizing logic to develop computational thinking and problem-solving skills.
 - Directed a team of instructors in delivering 150+ STEM education classes, enhancing student engagement by 25% through the development of interactive learning modules and collaborative projects.
-- Cultivated a collaborative environment by mentoring 5+ instructors, leading to a 30% increase in team efficiency and successfully implementing innovative teaching methodologies across multiple STEM programs.`
+- Cultivated a collaborative environment by mentoring 5+ instructors, leading to a 30% increase in team efficiency and successfully implementing innovative teaching methodologies across multiple STEM programs.`,
   };
 
-  function ScriptCopyBtn({ showMultiplePackageOptions = true, commandMap, className }) {
+  function ScriptCopyBtn({
+    showMultiplePackageOptions = true,
+    commandMap,
+    className,
+  }) {
     const packageManagers = Object.keys(commandMap);
     const [packageManager, setPackageManager] = useState(packageManagers[0]);
     const command = commandMap[packageManager];
@@ -38,7 +42,11 @@ August 2019 - January 2023, San Diego, CA
       .filter((point) => point);
 
     return (
-      <div className={`mx-auto flex w-auto items-center justify-center ${className || ""}`}>
+      <div
+        className={`mx-auto flex w-auto items-center justify-center ${
+          className || ""
+        }`}
+      >
         <div className="notification w-full">
           <div className="notititle">EXPERIENCE</div>
           <div className="mb-2 flex items-center px-5">
@@ -48,7 +56,10 @@ August 2019 - January 2023, San Diego, CA
                   {packageManagers.map((pm, index) => (
                     <div key={pm} className="flex items-center">
                       {index > 0 && (
-                        <div className="h-5 w-px bg-gray-600" aria-hidden="true" />
+                        <div
+                          className="h-5 w-px bg-gray-600"
+                          aria-hidden="true"
+                        />
                       )}
                       <button
                         className={`relative px-3 py-1 text-sm hover:bg-gray-200 ${

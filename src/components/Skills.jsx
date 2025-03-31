@@ -20,9 +20,8 @@ export const Skills = () => {
   return (
     <section className="p-8 bg-black">
       <h2 className="text-[#32a6ff] font-sans font-medium text-[1.1rem] z-[5] mb-2">
-  SKILLS
-</h2>
-
+        SKILLS
+      </h2>
 
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
